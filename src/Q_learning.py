@@ -5,12 +5,12 @@ class Q_learning():
     pass
 
   @staticmethod
-  def template():
+  def initialisation():
     """
     Return:
-      r dict: initialisation des q_values pour un état jamais visité 
+      r dict: Q_table initialisé à l'état 0 
     """
-    return {"up": 0, "down": 0, "right": 0, "left": 0}
+    return {0: {"up": 0, "down": 0, "right": 0, "left": 0}}
   
   @staticmethod
   def next(Q_table: dict, state: int, epsilon=0.8):
@@ -45,6 +45,6 @@ class Q_learning():
     Return:
       Q_table dict: Q_table contenant les q_value pour les actions à chaque état mise à jour
     """
-    Q_table[state+1] = Q_table.setdefault(state+1,Q_learning.template())
+    Q_table[state+1] = Q_table.setdefault(state+1,{"up": 0, "down": 0, "right": 0, "left": 0})
     Q_table[state][command] = (1-alpha)*Q_table[state][command]+alpha*(reward+gamma*max(Q_table[state+1].values()))
     return Q_table
