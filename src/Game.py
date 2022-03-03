@@ -52,7 +52,7 @@ class Maze():
       self.col -= 1
     pos_state = self.state[self.row][self.col]
     reward = self.reward[pos_state]
-    if pos_state in ["#","@"]:
+    if pos_state in ["#","@","*"]:
       self.running = False
     elif pos_state in ["0","?"]:
       self.state[self.row][self.col] = "*"
