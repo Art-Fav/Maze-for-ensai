@@ -7,6 +7,10 @@ class Maze():
     self.running = None
 
   def get_state(self):
+    """
+    Return:
+      r list: état du jeu
+    """
     return self.state
 
   def mazing(self, reward_table: dict, bonus: list, obstacles: list):
