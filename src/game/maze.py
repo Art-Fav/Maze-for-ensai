@@ -1,5 +1,8 @@
+import random
+
 class Maze():
   def __init__(self):
+    self.moves = None
     self.state = None
     self.reward = None
     self.row = None
@@ -12,14 +15,23 @@ class Maze():
       r list: état du jeu
     """
     return self.state
+  
+  def get_moves(self):
+    """
+    Return:
+      r list: liste des coups joués
+    """
+    return self.moves
 
-  def mazing(self, reward_table: dict, bonus: list, obstacles: list):
+  def mazing(self, reward_table: dict, bonus: list, obstacles: list, pre_moves=[]):
     """
     Args:
       reward dict: dictionnaire des rewards associés à chaque case rencontrée
       bonus list: liste des positions des bonus dans le maze
       obstacles list: liste des positions des obstacles dans le maze
+      pre_moves list: liste des premiers coups déjà joués
     """
+    self.moves = pre_moves
     self.state = [["0" for j in range(12)] for i in range(12)]
     for row in range(12):
       for col in range(12):
@@ -27,13 +39,28 @@ class Maze():
           self.state[row][col] = "#"
         elif (row,col) in bonus:
           self.state[row][col] = "?"
+        elif (row,col) in pre_moves:
+          self.state[row][col] = "*"
         elif (row,col) == (1,1):
           self.state[row][col] = "*"
         elif (row,col) == (10,10):
           self.state[row][col] = "@"
     self.reward = reward_table
-    self.row, self.col = [1,1]
+    if pre_moves:
+      self.row, self.col = [pre_moves[-1][0],pre_moves[-1][1]]
+    else:
+      self.row, self.col = [1,1]
     self.running = True
+    
+  def help(self):
+    """
+    Génération de bonus aléatoire proches de la sortie pour aider l'algorithme
+    """
+    for i in range(random.randint(0,3)):
+      row = 10-random.randint(0,3)
+      col = 10-random.randint(0,3)
+      if self.state[row][col] == "0":
+        self.state[row][col] = "?"
 
   def move(self, command: str):
     """
@@ -50,6 +77,7 @@ class Maze():
       self.col += 1
     else:
       self.col -= 1
+    self.moves.append((self.row,self.col))
     pos_state = self.state[self.row][self.col]
     reward = self.reward[pos_state]
     if pos_state in ["#","@","*"]:

@@ -1,4 +1,5 @@
 import time
+import random
 
 import pygame
 from pygame.locals import (
@@ -7,8 +8,8 @@ from pygame.locals import (
     QUIT,
 )
 
-from maze import Maze
-from Q_learning import Q_learning
+from game.maze import Maze
+from learning.Q_learning_eps import Q_learning_eps
 
 import parametrage as param
 
@@ -19,7 +20,7 @@ maze.mazing(reward_table=param.reward_table
             , bonus=param.bonus)
 
 # Initialisation de la Q_table
-Q_table = Q_learning.initialisation()
+Q_table = Q_learning_eps.initialisation()
 
 # Paramètres d'affichage
 color_table = param.color_table
@@ -38,6 +39,7 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 screen.fill((0, 0, 0))
 
 # Affichage du jeu
+maze.help()
 mat = maze.get_state()
 for i in range(12):
     for j in range(12):
@@ -66,11 +68,11 @@ while epoch < 10000:
             running = False
 
     if maze.running:
-        command = Q_learning.next(Q_table=Q_table
+        command = Q_learning_eps.next(Q_table=Q_table
                                     , state=state
-                                    , epsilon=0.9)
+                                    , epsilon=1-0.1)
         reward = maze.move(command=command)
-        Q_table = Q_learning.update(Q_table=Q_table
+        Q_table = Q_learning_eps.update(Q_table=Q_table
                                     , state=state
                                     , command=command
                                     , reward=reward)      
@@ -85,11 +87,16 @@ while epoch < 10000:
         pygame.display.flip()
 
     else:
+        moves = maze.get_moves()
+        keep = random.randint(0, len(moves)-1)
+        moves = moves[:keep]
+        state = keep
         maze.mazing(reward_table=param.reward_table
                     , obstacles=param.obstacles
-                    , bonus=param.bonus)
+                    , bonus=param.bonus
+                    , pre_moves=moves)
         epoch += 1
-        state = 0
+        maze.help()
         mat = maze.get_state()
         
         for i in range(12):
@@ -105,4 +112,3 @@ while epoch < 10000:
                 
     while time.time()-t < 0.02:
         pass
-
