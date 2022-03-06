@@ -70,9 +70,9 @@ class Maze():
       reward int: reward de l'action exécutée
     """
     if command == "up":
-      self.row += 1
-    elif command == "down":
       self.row -= 1
+    elif command == "down":
+      self.row += 1
     elif command == "right":
       self.col += 1
     else:
