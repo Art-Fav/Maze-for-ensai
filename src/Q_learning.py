@@ -13,7 +13,7 @@ class Q_learning():
     return {0: {"up": 0, "down": 0, "right": 0, "left": 0}}
   
   @staticmethod
-  def next(Q_table: dict, state: int, epsilon=0.8):
+  def next(Q_table: dict, state: int, epsilon=0.9):
     """
     Description:
       Choix de la prochaine action selon la méthode implémentée
@@ -31,7 +31,7 @@ class Q_learning():
     return command
 
   @staticmethod
-  def update(Q_table: dict, state: int, command: str, reward: int, alpha=0.1, gamma=0.6):
+  def update(Q_table: dict, state: int, command: str, reward: int, alpha=0.4, gamma=0.9):
     """
     Description:
       Mise à jour de la Q_table selon l'action décidée
