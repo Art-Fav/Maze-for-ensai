@@ -27,7 +27,7 @@ class Q_learning():
     if random.uniform(0,1) > epsilon:
       command = random.choice(list(Q_table[state].keys()))
     else:
-      command = max(Q_table[state], key=Q_table[state].get)
+      command = min(Q_table[state], key=Q_table[state].get)
     return command
 
   @staticmethod
@@ -46,5 +46,5 @@ class Q_learning():
       Q_table dict: Q_table contenant les q_value pour les actions à chaque état mise à jour
     """
     Q_table[state+1] = Q_table.setdefault(state+1,{"up": 0, "down": 0, "right": 0, "left": 0})
-    Q_table[state][command] = (1-alpha)*Q_table[state][command]+alpha*(reward+gamma*max(Q_table[state+1].values()))
+    Q_table[state][command] = (1-alpha)*Q_table[state][command]+alpha*(reward+gamma*min(Q_table[state+1].values()))
     return Q_table
