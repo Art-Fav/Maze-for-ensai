@@ -27,16 +27,16 @@ class Q_learning_ucb():
     Args:
       Q_table dict: Q_table contenant les q_value pour les actions à chaque état
       state int: numéro de l'action joué
-      c int: paramètre de la sélection selon ucb
+      c float: paramètre de la sélection selon ucb
     Return:
       command str: prochaine action déterminée par la méthode
     """
     tot = int(np.sum(Q_table[state]["nb_trials"]))
-    if tot < 4:
-        i_command = random.randint(0,3)
+    if 0 in Q_table[state]["nb_trials"]:
+        i_command = tot
     else:
         vect = [c*sqrt(log(tot)/n) for n in Q_table[state]["nb_trials"]]
-        i_command = np.argmin(Q_table[state]["values"]/Q_table[state]["nb_trials"] + np.array(vect))
+        i_command = np.argmin(Q_table[state]["values"] - np.array(vect))
     if i_command == 0:
         return "down"
     elif i_command == 1:
@@ -47,7 +47,7 @@ class Q_learning_ucb():
         return "left"
 
   @staticmethod
-  def update(Q_table: dict, state: int, command: str, reward: int, alpha=0.2, gamma=0.5):
+  def update(Q_table: dict, state: int, command: str, reward: int, alpha=0.3, gamma=0.7):
     """
     Description:
       Mise à jour de la Q_table selon l'action décidée
@@ -70,5 +70,6 @@ class Q_learning_ucb():
     else:
         i_command = 3
     Q_table[state+1] = Q_table.setdefault(state+1,{"values": np.zeros(4),"nb_trials": np.zeros(4)})
+    Q_table[state]["nb_trials"][i_command] += 1
     Q_table[state]["values"][i_command] = (1-alpha)*Q_table[state]["values"][i_command]+alpha*(reward+gamma*np.min(Q_table[state+1]["values"]))
     return Q_table

@@ -74,7 +74,7 @@ while epoch < 10000:
         if epoch < 1000:
             command = Q_learning_eps.next(Q_table=Q_table_eps
                                         , state=state
-                                        , epsilon=1-0.1/(1+epoch))
+                                        , epsilon=1)
         else:
             command = Q_learning_ucb.next(Q_table=Q_table_ucb
                                           , state=state
