@@ -74,15 +74,17 @@ while epoch < 10000:
 
     if maze.running:
         command = Q_learning_ucb.next(Q_table=Q_table
-                                    , state=state
-                                    , c=2)
-            
+                                        , state=state
+                                        , c=2)
+                
         reward = maze.move(command=command)
+        
         if reward == param.reward_table["0"]:
-            reward = reward * state
-
+            reward = reward * 5 * (state + 1)
         elif reward == param.reward_table["#"]:
-            reward = reward * 1.5
+            reward = reward * 5
+        elif reward == param.reward_table["*"]:
+            reward = reward * 5
 
         Q_table = Q_learning_ucb.update(Q_table=Q_table
                                     , state=state
@@ -96,7 +98,7 @@ while epoch < 10000:
         surf.fill(color)
         rect = surf.get_rect()
         screen.blit(surf, (w,h))
-        # pygame.display.flip()
+        pygame.display.flip()
         if epoch == 10000 % 1000:
             print(logs)
 
@@ -128,9 +130,9 @@ while epoch < 10000:
                 surf.fill(color)
                 rect = surf.get_rect()
                 screen.blit(surf, (w,h))
-                # pygame.display.flip()
+                pygame.display.flip()
                 
-    while time.time()-t < 0.02:
+    while time.time()-t < 0.00000002:
         pass
 
 print(logs)

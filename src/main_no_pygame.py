@@ -1,7 +1,10 @@
+from math import gamma
 import time
 import random
 import matplotlib.pyplot as plt
 import numpy as np
+import datetime
+import logging
 
 import pygame
 from pygame.locals import (
@@ -34,9 +37,14 @@ color_table = param.color_table
 epoch = 0
 state = 0
 arrived = False
+alpha = 0.3
+gamma_ = 0.7
+c = 5
+method = "UCB"
 
 # Logs
 logs = {"state": [], "epoch": [], "rewards": [], "actions": [], "arrived": []}
+logs_to_log = { "param": {"c": c, "alpha": alpha, "gamma": gamma_}}
 
 # Tant que l'apprentissage n'est pas fini
 while epoch < 10000:
@@ -45,21 +53,27 @@ while epoch < 10000:
     if maze.running:
         command = Q_learning_ucb.next(Q_table=Q_table
                                     , state=state
-                                    , c=2)
+                                    , c=c)
             
         reward = maze.move(command=command)
         if reward == param.reward_table["0"]:
-            reward = reward * state
-
+            reward = reward * 5 * state
+            logs_to_log["param"]["0"] = "reward * 5 * state"
         elif reward == param.reward_table["#"]:
-            reward = reward * 1.5
+            reward = reward * 5
+            logs_to_log["param"]["#"] = "reward * 5"
+        elif reward == param.reward_table["*"]:
+            reward = reward * 5
+            logs_to_log["param"]["*"] = "reward * 5"
         elif reward == param.reward_table["@"]:
             arrived = True
 
         Q_table = Q_learning_ucb.update(Q_table=Q_table
                                     , state=state
                                     , command=command
-                                    , reward=reward)      
+                                    , reward=reward
+                                    , alpha=alpha
+                                    , gamma=gamma_)      
         state += 1
         h = 50*maze.row + (maze.row+1)
         w = 50*maze.col + (maze.col+1)
@@ -70,7 +84,7 @@ while epoch < 10000:
         logs["rewards"].append(reward)
         logs["actions"].append(np.argmin(Q_table[state]["values"]))
         if epoch in [k * 1000 for k in range(1, 10)]:
-            print(epoch)
+            print("Epoch : {}".format(epoch))
         if arrived:
             logs["arrived"].append(epoch)
         moves = maze.get_moves()
@@ -83,56 +97,12 @@ while epoch < 10000:
                     , pre_moves=moves)
         epoch += 1
         maze.help()
-        mat = maze.get_state()  
+        mat = maze.get_state()
 
-# Paramètres d'affichage
-color_table = param.color_table
+logs_to_log["arrived"] = len(logs["arrived"])
 
-# Initialize pygame
-pygame.init()
-
-# Taille de l'affichage
-SCREEN_WIDTH = 613
-SCREEN_HEIGHT = 613
-
-# Création de l'affichage
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-
-# Fond noir
-screen.fill((0, 0, 0))
-
-# Initialisation du jeu
-maze = Maze()
-maze.mazing(reward_table=param.reward_table
-            , obstacles=param.obstacles
-            , bonus=param.bonus)
-
-# Affichage meilleur chemin
-for action in logs["actions"]:
-    if action == 0:
-        maze.move(command="down")
-    elif action == 1:
-        maze.move(command="right")
-    elif action == 2:
-        maze.move(commmand="up")
-    else:
-        maze.move(command="left")
-
-
-# Affichage du jeu
-maze.help()
-mat = maze.get_state()
-for i in range(12):
-    for j in range(12):
-        h = 50*i + (i+1)
-        w = 50*j + (j+1)
-        color = color_table[mat[i][j]]
-        surf = pygame.Surface((50, 50))
-        surf.fill(color)
-        rect = surf.get_rect()
-        screen.blit(surf, (w,h))
-        pygame.display.flip()
-
+logging.basicConfig(filename="logs/logs.log", level=logging.INFO)
+logging.info(str(datetime.datetime.now()) + " - methode :" + method + "\n logs : " + str(logs_to_log))
 
 if logs["arrived"]:
     print("L'algo à terminé {} fois.".format(len(logs["arrived"])))
@@ -145,8 +115,8 @@ else:
     print("L'algo n'a pas trouvé de chemin.")
 #print(logs["arrived"])
 
-plt.figure("state")
+"""plt.figure("state")
 plt.hist(logs["state"], label="longeur des chemins par nombre d'itérations")
 #plt.figure("rewards")
 # plt.plot("nombre d'itérations", "valeur des récompenses", data=logs["rewards"])
-plt.show()
+plt.show()"""

@@ -1,0 +1,124 @@
+INFO:root:2022-03-06 23:16:10.233576 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9546}
+INFO:root:2022-03-06 23:18:02.203803 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9603}
+INFO:root:2022-03-06 23:18:25.617795 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 0}
+INFO:root:2022-03-06 23:18:33.706994 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9232}
+INFO:root:2022-03-06 23:20:45.301071 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9552}
+INFO:root:2022-03-06 23:20:51.199417 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 0}
+INFO:root:2022-03-06 23:20:55.849492 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 0}
+INFO:root:2022-03-06 23:21:01.172843 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9098}
+INFO:root:2022-03-06 23:21:06.723440 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9534}
+INFO:root:2022-03-06 23:21:13.126570 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9128}
+INFO:root:2022-03-06 23:21:17.475029 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 0}
+INFO:root:2022-03-06 23:21:23.383320 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9702}
+INFO:root:2022-03-06 23:21:29.138448 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9285}
+INFO:root:2022-03-06 23:21:35.444035 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9158}
+INFO:root:2022-03-06 23:21:44.309898 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 0}
+INFO:root:2022-03-06 23:21:55.935194 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9602}
+INFO:root:2022-03-06 23:22:06.024470 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 0}
+INFO:root:2022-03-06 23:22:10.869993 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 0}
+INFO:root:2022-03-06 23:22:39.803752 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 0}
+INFO:root:2022-03-06 23:22:43.978215 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9298}
+INFO:root:2022-03-06 23:22:48.029646 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9378}
+INFO:root:2022-03-06 23:22:52.060418 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9442}
+INFO:root:2022-03-06 23:22:55.129003 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 0}
+INFO:root:2022-03-06 23:23:00.076137 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9341}
+INFO:root:2022-03-06 23:23:03.777343 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9273}
+INFO:root:2022-03-06 23:23:07.083780 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 0}
+INFO:root:2022-03-06 23:23:10.238868 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9413}
+INFO:root:2022-03-06 23:23:13.932441 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9261}
+INFO:root:2022-03-06 23:23:17.235019 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 0}
+INFO:root:2022-03-06 23:23:20.209188 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9525}
+INFO:root:2022-03-06 23:23:23.280570 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 0}
+INFO:root:2022-03-06 23:23:26.863758 - methode :UCB
+ logs : {'param': {'c': 5, 'alpha': 0.3, 'gamma': 0.7, '#': 'reward * 5', '0': 'reward * 5 * state'}, 'nb_converges': 9421}
+INFO:root:2022-03-06 23:29:08.061082 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 8969}
+INFO:root:2022-03-06 23:29:08.830127 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 7031}
+INFO:root:2022-03-06 23:29:09.587512 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 8095}
+INFO:root:2022-03-06 23:29:10.348917 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 6908}
+INFO:root:2022-03-06 23:29:11.122221 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 7105}
+INFO:root:2022-03-06 23:29:11.921856 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 9186}
+INFO:root:2022-03-06 23:29:12.782163 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 7810}
+INFO:root:2022-03-06 23:29:13.582760 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 8971}
+INFO:root:2022-03-06 23:29:14.387358 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 8250}
+INFO:root:2022-03-06 23:29:15.160733 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 8715}
+INFO:root:2022-03-06 23:29:15.934582 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 7424}
+INFO:root:2022-03-06 23:29:16.692268 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 6165}
+INFO:root:2022-03-06 23:29:17.464694 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 7761}
+INFO:root:2022-03-06 23:29:18.212313 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 9351}
+INFO:root:2022-03-06 23:29:18.973132 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 4695}
+INFO:root:2022-03-06 23:29:19.743747 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 8548}
+INFO:root:2022-03-06 23:29:20.523759 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 7945}
+INFO:root:2022-03-06 23:29:21.281889 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 6830}
+INFO:root:2022-03-06 23:29:22.046433 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 7533}
+INFO:root:2022-03-06 23:29:22.808271 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 5120}
+INFO:root:2022-03-06 23:29:23.579361 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 8247}
+INFO:root:2022-03-06 23:29:24.359508 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 8419}
+INFO:root:2022-03-06 23:29:25.131969 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 8774}
+INFO:root:2022-03-06 23:29:25.899195 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 8241}
+INFO:root:2022-03-06 23:29:26.684895 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 8598}
+INFO:root:2022-03-06 23:29:27.488951 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 5615}
+INFO:root:2022-03-06 23:29:28.286657 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 7589}
+INFO:root:2022-03-06 23:29:29.059871 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 9448}
+INFO:root:2022-03-06 23:29:29.826678 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 7204}
+INFO:root:2022-03-06 23:29:30.609092 - methode :Epsilon greedy
+ logs : {'param': {'alpha': 0.3, 'gamma': 0.7, '0': 'reward * 5 * state'}, 'nb_converges': 7808}
