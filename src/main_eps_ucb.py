@@ -7,7 +7,7 @@ from pygame.locals import (
     KEYDOWN,
     QUIT,
 )
-
+#Arthur est une merde qui monopile le git Bl
 from game.maze import Maze
 from learning.Q_learning_eps import Q_learning_eps
 from learning.Q_learning_ucb import Q_learning_ucb
